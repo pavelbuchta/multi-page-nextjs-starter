@@ -1,0 +1,11 @@
+export const METADATA_BASE = "https://exponedesign.com";
+export const COMPANY_NAME = "EXAMPLE_COMPANY_NAME";
+export const COMPANY_CATEGORY = "EXAMPLE_COMPANY_CATEGORY";
+
+export const METADATA_TITLE = `${COMPANY_CATEGORY} - EXAMPLE_SLOGAN`;
+export const METADATA_DESCRIPTION = ``;
+export const METADATA_KEYWORDS = [
+  COMPANY_CATEGORY,
+  COMPANY_CATEGORY,
+  "EXAMPLE_KEYWORD",
+];

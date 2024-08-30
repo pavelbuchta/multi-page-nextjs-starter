@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark; /* Creates a dark scrollbar */
+
+  --foreground: black;
+  --foreground-secondary: black;
+  --foreground-tertiary: black;
+
+  --background: black;
+  --background-secondary: black;
+  --background-secondary: black;
+
+  --border: black;
+
+  --accend: black;
+}
+
+.theme-light {
+  --foreground: black;
+  --foreground-secondary: black;
+  --foreground-tertiary: black;
+
+  --background: black;
+  --background-secondary: black;
+  --background-secondary: black;
+
+  --border: black;
+
+  --accend: black;
+}
+
+::selection {
+  @apply bg-foreground text-background;
+}
+
+.theme-light > * ::selection {
+  @apply bg-foreground text-background;
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+}
+
+@layer components {
+}
+
+@layer utilities {
+  .transition-base {
+    @apply duration-300 ease-in-out;
+  }
+}
