@@ -9,8 +9,6 @@ import {
 import constants from "@/config/constants";
 import clsx from "clsx";
 import { Metadata } from "next";
-import { NextIntlClientProvider } from "next-intl";
-import { getMessages, unstable_setRequestLocale } from "next-intl/server";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
@@ -54,25 +52,18 @@ export const metadata: Metadata = {
 
 export default async function RootLayout({
   children,
-  params: { locale },
 }: Readonly<{
   children: React.ReactNode;
-  params: { locale: string };
 }>) {
-  unstable_setRequestLocale(locale);
-  const messages = await getMessages();
-
   return (
-    <html lang={locale}>
+    <html>
       <body
         className={clsx(
           "m-0 bg-background p-0 font-sans text-foreground antialiased",
           inter.variable
         )}
       >
-        <NextIntlClientProvider messages={messages}>
-          {children}
-        </NextIntlClientProvider>
+        {children}
       </body>
     </html>
   );
